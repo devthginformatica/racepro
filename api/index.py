@@ -8,10 +8,10 @@ app = FastAPI()
 def conectar_mysql():
     try:
         conn = pymysql.connect(
-            host=os.getenv("MYSQL_HOST"),
-            user=os.getenv("MYSQL_USER"),
-            password=os.getenv("MYSQL_PASSWORD"),
-            database=os.getenv("MYSQL_DB"),
+            host=os.getenv("190.89.249.24"),
+            user=os.getenv("db_user_racepro"),
+            password=os.getenv("hfbga@h764Hg"),
+            database=os.getenv("racepro_db"),
             port=int(os.getenv("MYSQL_PORT", 3306)),
             connect_timeout=5
         )
