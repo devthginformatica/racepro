@@ -12,7 +12,7 @@ def conectar_mysql():
             user=os.getenv("db_user_racepro"),
             password=os.getenv("hfbga@h764Hg"),
             database=os.getenv("racepro_db"),
-            port=os.getenv("3306"),
+            port=int(os.getenv("MYSQL_PORT", 3306)),
             connect_timeout=5
         )
         with conn.cursor() as cursor:
